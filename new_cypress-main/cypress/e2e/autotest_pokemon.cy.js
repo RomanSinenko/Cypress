@@ -16,23 +16,23 @@ describe('e2e_test_pay_avatar', function(){
         cy.get('.auth__form > .auth__text').contains('Зарегистрироваться'); // название ссылки -"Зарегистрироваться"
         
         //Авторизация
-        cy.get(':nth-child(1) > .auth__input').type('user_login'); //ввод логина
-        cy.get('#password').type('user_password'); //ввод пароль
+        cy.get(':nth-child(1) > .auth__input').type('LOGIN'); //ввод логина
+        cy.get('#password').type('PASSWORD'); //ввод пароль
         cy.get('.auth__button').click(); //клик по кнопке "войти"
 
         //Переход в магазин
-        cy.wait(6000); //таймаут
+    
         cy.get('.header__btns > :nth-child(4)').should('be.visible'); //вкладку магазин видно
-        cy.get(':nth-child(5) > .header__btn-img').should('be.visible'); //манетку на вкладке магазин видно
+        cy.get(':nth-child(4) > .header__btn-img').should('be.visible'); //манетку на вкладке магазин видно
         cy.get('.header__btns > :nth-child(4)').contains('Магазин'); //на вкладке надпись "Магазин"
         cy.get('.header__btns > :nth-child(4)').click(); //клик по вкладке магазин
 
         //Выбор аватара
         cy.wait(6000);
-        cy.get(':nth-child(5) > .shop__price').should('be.visible'); //карточку с аватаром видно
-        cy.get(':nth-child(5) > .shop__button').should('be.visible'); //кнопку купить видно
-        cy.get(':nth-child(5) > .shop__button').contains('Купить'); //на кнопке написанно "Купить"
-        cy.get(':nth-child(5) > .shop__button').click(); //клик по кнопке
+        cy.get(':nth-child(4) > .shop__price').should('be.visible'); //карточку с аватаром видно
+        cy.get(':nth-child(4) > .shop__button').should('be.visible'); //кнопку купить видно
+        cy.get(':nth-child(4) > .shop__button').contains('Купить'); //на кнопке написанно "Купить"
+        cy.get(':nth-child(4) > .shop__button').click(); //клик по кнопке
 
         //Опалата проверка формы
         cy.wait(6000); //таймаут
