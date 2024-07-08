@@ -1,7 +1,7 @@
-import * as data from '../helpers/default_data.json'
-import * as main from '../locators/main_page.json'
-import * as result from '../locators/result_page.json'
-import * as recovery from '../locators/recovery_password_page.json'
+import * as data from '../helpers/default_data.json' //json с логином и паролем
+import * as main from '../locators/main_page.json' //json локаторы страницы main
+import * as result from '../locators/result_page.json' // json с локаторами страницы результат
+import * as recovery from '../locators/recovery_password_page.json' // json с локаторами страницы восстановления пароля
 
 describe('Authorization form test', function(){
 
